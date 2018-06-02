@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/edit_back"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.bijay.work1.profile.editmode_layout">
+
+    <android.support.design.widget.AppBarLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:fitsSystemWindows="false">
+
+
+        <ImageView
+
+            android:id="@+id/propicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="false"
+            android:scaleType="centerCrop" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="235dp" />
+
+    <!--   <View
+           android:layout_marginTop="510dp"
+           android:layout_width="match_parent"
+           android:layout_height="2.0dp"
+           android:layout_marginBottom="20dp"
+           android:background="@android:color/black">
+
+       </View>
+
+       <TextView
+           android:id="@+id/note"
+           android:layout_marginTop="520dp"
+           android:layout_marginLeft="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="NOTE: To Change password and phone number"
+           android:fontFamily="@font/aclonica"
+           android:textSize="16dp"
+           android:layout_marginBottom="10dp"/>
+       <TextView
+           android:id="@+id/notice"
+           android:gravity="center"
+           android:layout_marginTop="560dp"
+           android:textColor="@drawable/button2_back"
+           android:layout_marginLeft="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="GO TO SETTING"
+           android:fontFamily="@font/aclonica"
+           android:textSize="16dp"
+           android:layout_marginBottom="10dp"/>-->
+
+
+</android.support.design.widget.CoordinatorLayout>

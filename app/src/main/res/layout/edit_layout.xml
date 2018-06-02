@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@drawable/newviewedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:id="@+id/editpro"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:padding="5dp"
+                android:id="@+id/edittext"
+                android:text="Edit profile"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="visible"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/aclonica"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:textColor="@color/guide"
+                android:textSize="18sp"
+                app:met_singleLineEllipsis="true"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/aclonica"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/guide"
+                android:textSize="18sp"
+                app:met_singleLineEllipsis="true"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"
+                />
+
+          <!--  <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/aclonica"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:textColor="@color/guide"
+                android:textSize="18sp" />-->
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/aclonica"
+                android:hint="Current Address"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/guide"
+                android:textSize="18sp"
+                app:met_singleLineEllipsis="true"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"/>
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnupdate"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/buttton_background"
+                android:clickable="true"
+                android:fontFamily="@font/aclonica"
+                android:text="UPDATE"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

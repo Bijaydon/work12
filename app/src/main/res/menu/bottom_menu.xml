@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Hospitals"
+        android:icon="@drawable/ic_local_hospital_black_24dp"
+        app:showAsAction="always|withText"
+
+        />
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Pharmacies"
+        android:icon="@drawable/ic_local_pharmacy_black_24dp"
+        app:showAsAction="always|withText"
+
+        />
+
+
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Ambulance Service"
+        android:icon="@drawable/ic_airport_shuttle_black_24dp"
+        app:showAsAction="always|withText"
+
+        />
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Schools"
+        android:icon="@drawable/ic_school_black_24dp"
+        app:showAsAction="always|withText"
+
+        />
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Hostels"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="always|withText"
+
+        />
+
+    <!--<item
+
+
+        android:enabled="true"
+        android:title="Consultancies"
+        android:icon="@drawable/ic_business_black_24dp"
+        app:showAsAction="always|withText"
+
+        />
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Hotels"
+        android:icon="@drawable/ic_hotel_black_24dp"
+        app:showAsAction="always|withText"
+
+        />
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Restaurants"
+        android:icon="@drawable/ic_restaurant_black_24dp"
+        app:showAsAction="always|withText"
+
+        />
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Cafes"
+        android:icon="@drawable/ic_local_cafe_black_24dp"
+        app:showAsAction="always|withText"
+
+
+        />
+
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Bars"
+        android:icon="@drawable/ic_local_bar_black_24dp"
+        app:showAsAction="always|withText"
+
+
+        />
+
+
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Pizza Stores"
+        android:icon="@drawable/ic_local_pizza_black_24dp"
+        app:showAsAction="always|withText"
+
+
+        />
+
+
+
+    <item
+
+
+        android:enabled="true"
+        android:title="Lodges"
+        android:icon="@drawable/ic_location_city_black_24dp"
+        app:showAsAction="always|withText"
+
+
+        />-->
+
+
+
+
+
+
+
+
+</menu>

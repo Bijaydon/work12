@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/info_layout"
+    tools:context="com.example.bijay.work1.locations_info.add_locations_info">
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card"
+            android:id="@+id/scrollView2">
+
+        <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">
+
+
+
+          <com.rengwuxian.materialedittext.MaterialEditText
+              android:id="@+id/hos_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:hint="Hospital's Name"
+              android:fontFamily="@font/aclonica"
+              android:inputType="textAutoComplete"
+              android:textColor="@color/guide"
+              android:textSize="18sp"
+              app:met_singleLineEllipsis="true"
+              app:met_baseColor="@android:color/black"
+              app:met_floatingLabel="highlight"
+              app:met_primaryColor="@color/colorPrimary"/>
+
+          <com.rengwuxian.materialedittext.MaterialEditText
+              android:id="@+id/hos_address"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:hint="Hospital's Address"
+              android:fontFamily="@font/aclonica"
+              android:inputType="textAutoComplete"
+              android:textColor="@color/guide"
+              android:textSize="18sp"
+              app:met_singleLineEllipsis="true"
+              app:met_baseColor="@android:color/black"
+              app:met_floatingLabel="highlight"
+              app:met_primaryColor="@color/colorPrimary"/>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/hos_latitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Lattitude"
+                android:fontFamily="@font/aclonica"
+                android:textColor="@color/guide"
+                android:textSize="18sp"
+                app:met_singleLineEllipsis="true"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/hos_longitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Longitude"
+                android:fontFamily="@font/aclonica"
+                android:textColor="@color/guide"
+                android:textSize="18sp"
+                app:met_singleLineEllipsis="true"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/hos_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Opening Hour"
+                android:fontFamily="@font/aclonica"
+                android:inputType="time"
+                android:textColor="@color/guide"
+                android:textSize="18sp"
+                app:met_singleLineEllipsis="true"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/hos_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Closing Hour"
+                android:fontFamily="@font/aclonica"
+                android:inputType="time"
+                android:textColor="@color/guide"
+                android:textSize="18sp"
+                app:met_singleLineEllipsis="true"
+                app:met_baseColor="@android:color/black"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"/>
+
+
+            <Button
+                android:id="@+id/save_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Save Info"
+                android:background="@drawable/button2_back"/>
+
+
+        </LinearLayout>
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/reoption_relative"
+    android:background="@drawable/optionscreen_background"
+    android:visibility="invisible">
+
+
+    <ImageButton
+
+        android:id="@+id/btnreback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editbutton_background"
+        android:padding="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnreback">
+
+
+
+    <LinearLayout
+
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/newviewedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@android:color/transparent">
+
+        <LinearLayout
+            android:background="@drawable/newviewedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/aclonica"
+                android:text="Other Sector"/>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:background="@drawable/optionitem"
+                android:id="@+id/B_bank"
+
+                android:layout_marginLeft="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_account_balance_black_24dp" >
+
+
+
+            </ImageButton>
+
+
+
+            <ImageButton
+                android:background="@drawable/optionitem"
+                android:id="@+id/B_atm"
+
+                android:layout_marginLeft="28dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_local_atm_black_24dp"
+                />
+
+            <ImageButton
+                android:background="@drawable/optionitem"
+
+                android:id="@+id/B_pump"
+
+                android:layout_marginLeft="27dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_local_gas_station_black_24dp"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/transparentwhite">
+            <TextView
+                android:layout_marginLeft="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Banks"
+                android:fontFamily="@font/aclonica"/>
+
+            <TextView
+                android:layout_marginLeft="0dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ATM"
+                android:fontFamily="@font/aclonica"/>
+
+            <TextView
+                android:layout_marginLeft="220dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gas Stations"
+                android:fontFamily="@font/aclonica"/>
+
+        </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_garage"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_directions_bike_black_24dp" >
+
+
+
+                </ImageButton>
+
+
+                <ImageButton
+                    android:id="@+id/B_park"
+                    android:layout_width="80dp"
+
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="28dp"
+                    android:background="@drawable/optionitem"
+                    android:src="@drawable/ic_local_parking_black_24dp" />
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_carwash"
+
+                    android:layout_marginLeft="27dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_local_car_wash_black_24dp"
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/transparentwhite">
+                <TextView
+                    android:layout_marginLeft="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bike Garage"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parking Area"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="225dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Car wash"
+                    android:fontFamily="@font/aclonica"/>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <!--Fourth row-->
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:id="@+id/B_taxi"
+
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/optionitem"
+                    android:src="@drawable/ic_local_taxi_black_24dp">
+
+
+                </ImageButton>
+
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:id="@+id/B_showroom"
+
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="28dp"
+                    android:background="@drawable/optionitem"
+                    android:baselineAligned="false"
+                    android:src="@drawable/ic_motorcycle_black_24dp" />
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:id="@+id/B_haircut"
+
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="27dp"
+                    android:background="@drawable/optionitem"
+                    android:src="@drawable/ic_content_cut_black_24dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/transparentwhite">
+                <TextView
+                    android:layout_marginLeft="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taxi"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="0dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Showroom"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="220dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hair cut"
+                    android:fontFamily="@font/aclonica"/>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2.0dp"
+            android:layout_marginBottom="20dp"
+
+            android:background="@android:color/black"></View>
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

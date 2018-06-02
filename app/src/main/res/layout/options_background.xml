@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/option_relative"
+    android:background="@drawable/optionscreen_background"
+    android:visibility="invisible">
+
+
+    <ImageButton
+
+        android:id="@+id/btnback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editbutton_background"
+        android:padding="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+    <ImageButton
+
+        android:id="@+id/btnnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editbutton_background"
+        android:padding="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_arrow_forward_black_24dp"/>
+
+
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnback">
+
+
+
+    <LinearLayout
+
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/newviewedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:background="@drawable/newviewedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Health Sector"/>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="5dp">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+        <ImageButton
+            android:background="@drawable/optionitem"
+            android:id="@+id/B_hospitals"
+            android:layout_marginLeft="10dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_local_hospital_black_24dp" >
+
+
+
+        </ImageButton>
+
+                
+
+        <ImageButton
+            android:background="@drawable/optionitem"
+            android:id="@+id/B_pharmacies"
+
+            android:layout_marginLeft="28dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_local_pharmacy_black_24dp"
+            />
+
+        <ImageButton
+            android:background="@drawable/optionitem"
+            android:id="@+id/B_ambulance"
+
+            android:layout_marginLeft="27dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_airport_shuttle_black_24dp"
+            />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/transparentwhite">
+            <TextView
+                android:layout_marginLeft="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hospitals"
+                android:fontFamily="@font/aclonica"/>
+
+            <TextView
+                android:layout_marginLeft="0dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pharmecies"
+                android:fontFamily="@font/aclonica"/>
+
+            <TextView
+                android:layout_marginLeft="220dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ambulance"
+                android:fontFamily="@font/aclonica"/>
+
+        </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2.0dp"
+
+            android:background="@android:color/black"></View>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:background="@drawable/newviewedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Education"/>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <!--second row-->
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_schools"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_school_black_24dp" >
+
+
+
+                </ImageButton>
+
+
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_hostel"
+
+                    android:layout_marginLeft="28dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_hostel_black_24dp"
+                    />
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_consultancies"
+
+                    android:layout_marginLeft="27dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_business_black_24dp"
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/transparentwhite">
+                <TextView
+                    android:layout_marginLeft="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Colleges"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="0dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hostels"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="210dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Travel Agency"
+                    android:fontFamily="@font/aclonica"/>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2.0dp"
+
+            android:background="@android:color/black"></View>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:background="@drawable/newviewedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Food And Shelter"/>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+
+        <!--Third row-->
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_hotels"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_hotel_black_24dp" >
+
+
+
+                </ImageButton>
+
+
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_restaurants"
+
+                    android:layout_marginLeft="28dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_restaurant_black_24dp"
+                    />
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_cafe"
+
+                    android:layout_marginLeft="27dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_local_cafe_black_24dp"
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/transparentwhite">
+                <TextView
+                    android:layout_marginLeft="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hotels"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="0dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurants"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="225dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cafes"
+                    android:fontFamily="@font/aclonica"/>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <!--Fourth row-->
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_bar"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_local_bar_black_24dp" >
+
+
+
+                </ImageButton>
+
+
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_pizza"
+
+                    android:layout_marginLeft="28dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_local_pizza_black_24dp"
+                    />
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_lodge"
+
+                    android:layout_marginLeft="27dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_location_city_black_24dp"
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/transparentwhite">
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bar"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="0dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pizza store"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="220dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lodges"
+                    android:fontFamily="@font/aclonica"/>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2.0dp"
+
+            android:background="@android:color/black"></View>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:background="@drawable/newviewedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Entertainment"/>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <!--Fifth row-->
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_mall"
+
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_store_mall_directory_black_24dp" >
+
+
+
+                </ImageButton>
+
+
+                <ImageButton
+                    android:layout_width="80dp"
+
+                    android:id="@+id/B_cinema"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="28dp"
+                    android:background="@drawable/optionitem"
+                    android:src="@drawable/ic_movie_black_24dp" />
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_gym"
+
+                    android:layout_marginLeft="27dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_fitness_center_black_24dp"
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_marginBottom="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/transparentwhite">
+                <TextView
+                    android:layout_marginLeft="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mall"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="0dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cinema Hall"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="220dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gym Hall"
+                    android:fontFamily="@font/aclonica"/>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+        <!--Sixth row-->
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_directions_run_black_24dp" >
+
+
+
+                </ImageButton>
+
+
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_swimming"
+
+                    android:layout_marginLeft="28dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_pool_black_24dp"
+                    />
+
+                <ImageButton
+                    android:background="@drawable/optionitem"
+                    android:id="@+id/B_casino"
+
+                    android:layout_marginLeft="27dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_casino_black_24dp"
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_marginBottom="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/transparentwhite">
+                <TextView
+                    android:layout_marginLeft="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Futsal"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="0dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Swimming pool"
+                    android:fontFamily="@font/aclonica"/>
+
+                <TextView
+                    android:layout_marginLeft="227dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Casinos"
+                    android:fontFamily="@font/aclonica"/>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2.0dp"
+            android:layout_marginBottom="20dp"
+
+            android:background="@android:color/black"></View>
+
+
+    </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

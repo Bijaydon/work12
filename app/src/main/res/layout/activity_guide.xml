@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/guide"
+    android:layout_height="match_parent"
+    tools:context="com.example.bijay.work1.homescreen_and_guidesliders.guide">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/dotsview"
+        android:layout_alignLeft="@+id/backbtn"
+        android:layout_alignStart="@+id/backbtn"
+        android:layout_marginBottom="19dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+
+
+        android:id="@+id/dotsview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+    </LinearLayout>
+
+    <Button
+        android:textColor="#4a2806"
+        android:id="@+id/backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nxtbtn"
+        android:layout_alignBottom="@+id/nxtbtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/newbtnview"
+        android:fontFamily="@font/aclonica"
+        android:text="Back"
+        android:visibility="invisible" />
+
+    <Button
+        android:fontFamily="@font/aclonica"
+        android:background="@drawable/newbtnview"
+        android:id="@+id/nxtbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dotsview"
+        android:layout_alignEnd="@+id/pageview"
+        android:layout_alignRight="@+id/pageview"
+        android:text="Next"
+        android:textColor="#4a2806"/>
+
+    <Button
+        android:background="@drawable/newbtnview"
+        android:fontFamily="@font/aclonica"
+        android:id="@+id/finishbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Finish"
+        android:textColor="#4a2806"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>
