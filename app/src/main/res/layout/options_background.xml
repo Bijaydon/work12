@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/option_relative"
     android:background="@drawable/optionscreen_background"
-    android:visibility="invisible">
+    android:visibility="visible">
 
 
     <ImageButton

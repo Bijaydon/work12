@@ -60,7 +60,7 @@ public class signup extends AppCompatActivity  {
 
     private FirebaseAuth.AuthStateListener mAuthListener;
     //DatabaseReference datauser;
-    FirebaseAuth auth;
+    FirebaseAuth mAuth;
     DatabaseReference Ueser;
 
 
@@ -136,7 +136,7 @@ public class signup extends AppCompatActivity  {
         mrelativelayout = findViewById(R.id.relativelayout);
 
 
-        auth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         Ueser = FirebaseDatabase.getInstance().getReferenceFromUrl("https://work1-1da82.firebaseio.com/User");
 
 
@@ -406,6 +406,7 @@ public class signup extends AppCompatActivity  {
 
 
                     String id = Ueser.push().getKey();
+
 
                     Model model = new Model();
                     model.setAddress(address1);

@@ -23,6 +23,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -38,6 +41,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.bijay.work1.ListActivity;
+import com.example.bijay.work1.Recycler_adapter;
 import com.example.bijay.work1.locations_info.add_locations_info;
 import com.example.bijay.work1.nav_options.About1;
 import com.example.bijay.work1.Common;
@@ -79,6 +84,7 @@ import java.io.IOException;
 import java.util.List;
 
 import Retrofit.IGoogleApiservices;
+import Retrofit.RetrofitApiInterface;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -93,6 +99,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
 
     SupportMapFragment mapFragment;
     private GoogleMap mMap;
+    RecyclerView recyclerView;
 
 
     //Play Services
@@ -123,6 +130,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
     DatabaseReference Ueser;
     StorageReference storageReference;
     LinearLayout mprofile;
+    String uid,databaseid;
     ImageButton mmainsearch, mbtnsearch,mbtnback,mbtnreback,mbtnnext,mhospital,mschools,mrestaurants,mbar,mhotel,mhostel,mpharmacies,mambulance,mpizza,mcafe,
     mbank,matm,mgas_station,mparking,mcarwash,mtaxi,mhaircut,mshowroom,mgarage,mcasino,mcinema,mgym,mshopmall,mlodge,mconsultancy,mswimming;
     RelativeLayout moption_relative,mreoption_relative;
@@ -131,6 +139,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
     Marker mCurrentUser;
     View mapView;
     IGoogleApiservices mservice;
+    RetrofitApiInterface mservicelist;
 
 
 
@@ -252,6 +261,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
         musermob=(TextView)headerlayout.findViewById(R.id.usermob);
 
         mservice= Common.getGoogleAPIservice();
+        mservicelist=Common.getRetrofitApiInterface();
 
 
 
@@ -462,6 +472,21 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
 
             }
         });
+
+        mrestaurants.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+
+                getMenu("restaurant");
+
+                return false;
+            }
+        });
+
+
+
+
+
 
         /*mhostel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1080,6 +1105,39 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
 
                     }
                 });
+
+    }
+
+
+
+    private void getMenu(final String placeType){
+        String url=getUrl(latitude,longitude,placeType);
+        mservicelist.getMenuJson(url).enqueue(new Callback<List<Results>>() {
+            @Override
+            public void onResponse(Call<List<Results>> call, Response<List<Results>> response) {
+
+
+
+                Recycler_adapter recycler_adapter = new Recycler_adapter(homepage.this,response.body());
+                //  RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
+                LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(homepage.this, LinearLayoutManager.HORIZONTAL, false);
+                recyclerView.setLayoutManager(horizontalLayoutManager);
+                recyclerView.setHasFixedSize(true);
+
+                //recyclerView.setLayoutManager(layoutManager);
+                recyclerView.setItemAnimator(new DefaultItemAnimator());
+                recyclerView.setAdapter(recycler_adapter);
+                recycler_adapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Results>> call, Throwable t) {
+
+            }
+        });
+
+
     }
 
     private String getUrl(double latitude,double longitude,String placeType){
@@ -1234,6 +1292,8 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
        dialog.show();
 
 
+
+
     }
 
 
@@ -1263,7 +1323,8 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
             LatLng latLng=new LatLng(address.getLatitude(),address.getLongitude());
             mMap.addMarker(new MarkerOptions()
                     .position(latLng)
-                    .title(location));
+                    .title(location)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
 
 
@@ -1289,36 +1350,47 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
 
     public void setinform(){
 
-
         Ueser.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
-                for (DataSnapshot es : dataSnapshot.getChildren()){
-                    Model model1=new Model();
-                    model1.setMobile(es.getValue(Model.class).getMobile());
-                    model1.setName(es.getValue(Model.class).getName());
-                    model1.setMimageurl(es.getValue(Model.class).getMimageurl());
+                //Model model = new Model();
 
 
+                /*uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                databaseid = model.getId();
 
-                   musermob.setText(model1.getMobile());
-                   musername.setText(model1.getName());
+                if ((uid).equals(model.getId())) {*/
 
-                    Picasso.with(homepage.this )
-                            .load(model1.getMimageurl())
-                            .fit()
-                            .centerCrop()
-                            .into(mpro);
 
-                }
+                    for (DataSnapshot es: dataSnapshot.getChildren()) {
+                        Model model1 = new Model();
+                        model1.setMobile(es.getValue(Model.class).getMobile());
+                        model1.setName(es.getValue(Model.class).getName());
+                        model1.setMimageurl(es.getValue(Model.class).getMimageurl());
+
+
+                        musermob.setText(model1.getMobile());
+                        musername.setText(model1.getName());
+
+                        Picasso.with(homepage.this)
+                                .load(model1.getMimageurl())
+                                .fit()
+                                .centerCrop()
+                                .into(mpro);
+
+                    }
+
             }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
 
-            }
+                    @Override
+                    public void onCancelled (DatabaseError databaseError){
+
+                    }
+
+
         });
+
 
 
     }
@@ -1406,7 +1478,6 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
                 displayLocation();
             }
         }
-        ;
 
     }
 

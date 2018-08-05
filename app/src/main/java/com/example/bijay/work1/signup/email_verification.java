@@ -127,14 +127,14 @@ public class email_verification extends AppCompatActivity{
     }
 
 
-    @Override
+    /*@Override
     protected void onStop() {
 
         Snackbar.make(mainLayoutt, "Email Verification Failed", Snackbar.LENGTH_SHORT).show();
         deleteuser();
 
         super.onStop();
-    }
+    }*/
 
     private void deleteuser() {
 

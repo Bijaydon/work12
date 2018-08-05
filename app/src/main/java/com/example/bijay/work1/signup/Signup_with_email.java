@@ -315,7 +315,8 @@ public class Signup_with_email extends AppCompatActivity {
                             waitingdialog.dismiss();
 
                             //Save to database
-                            String id = Ueser.push().getKey();
+                            //String id = Ueser.push().getKey();
+                            String id = auth.getCurrentUser().getUid();
 
                             Model model = new Model();
                             model.setAddress(address1);
