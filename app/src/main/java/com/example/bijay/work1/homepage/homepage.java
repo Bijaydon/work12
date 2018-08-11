@@ -132,7 +132,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
     LinearLayout mprofile;
     String uid,databaseid;
     ImageButton mmainsearch, mbtnsearch,mbtnback,mbtnreback,mbtnnext,mhospital,mschools,mrestaurants,mbar,mhotel,mhostel,mpharmacies,mambulance,mpizza,mcafe,
-    mbank,matm,mgas_station,mparking,mcarwash,mtaxi,mhaircut,mshowroom,mgarage,mcasino,mcinema,mgym,mshopmall,mlodge,mconsultancy,mswimming;
+    mbank,matm,mgas_station,mparking,mcarwash,mtaxi,mhaircut,mshowroom,mgarage,mcasino,mcinema,mgym,mshopmall,mlodge,mconsultancy,mswimming,mfutsall;
     RelativeLayout moption_relative,mreoption_relative;
 
     GeoFire geoFire;
@@ -188,6 +188,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
         mlodge=findViewById(R.id.B_lodge);
         mconsultancy=findViewById(R.id.B_consultancies);
         mswimming=findViewById(R.id.B_swimming);
+        mfutsall=findViewById(R.id.futsall);
 
 
 
@@ -362,9 +363,9 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
             @Override
             public void onClick(View view) {
 
-                nearbyplace("school");
+                nearbyplace("college");
                 moption_relative.setVisibility(View.INVISIBLE);
-                Toast.makeText(homepage.this, "Showing Nearby Schools", Toast.LENGTH_SHORT).show();
+                Toast.makeText(homepage.this, "Showing Nearby Colleges", Toast.LENGTH_SHORT).show();
 
                /* mMap.clear();
                 Object dataTransfer[] = new Object[2];
@@ -407,11 +408,15 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
 
 
 
-        /*mambulance.setOnClickListener(new View.OnClickListener() {
+        mambulance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                mMap.clear();
+             nearbyplace("ambulance");
+                moption_relative.setVisibility(View.INVISIBLE);
+                Toast.makeText(homepage.this, "Showing Nearby ambulances service", Toast.LENGTH_SHORT).show();
+
+                /*mMap.clear();
                 Object dataTransfer[] = new Object[2];
                 GetNearbyplacesData getNearbyPlacesData = new GetNearbyplacesData();
                 moption_relative.setVisibility(View.INVISIBLE);
@@ -421,18 +426,18 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(homepage.this, "Showing Nearby Ambulance services", Toast.LENGTH_SHORT).show();
+                Toast.makeText(homepage.this, "Showing Nearby Ambulance services", Toast.LENGTH_SHORT).show();*/
 
             }
-        });*/
+        });
 
         mconsultancy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                nearbyplace("travel_agency");
+                nearbyplace("consultancy");
                 moption_relative.setVisibility(View.INVISIBLE);
-                Toast.makeText(homepage.this, "Showing Nearby Travel Agencies", Toast.LENGTH_SHORT).show();
+                Toast.makeText(homepage.this, "Showing Nearby consultancies", Toast.LENGTH_SHORT).show();
 
                 /*mMap.clear();
                 Object dataTransfer[] = new Object[2];
@@ -488,11 +493,15 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
 
 
 
-        /*mhostel.setOnClickListener(new View.OnClickListener() {
+        mhostel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                mMap.clear();
+                nearbyplace("hostel");
+                moption_relative.setVisibility(View.INVISIBLE);
+                Toast.makeText(homepage.this, "Showing Nearby hostels", Toast.LENGTH_SHORT).show();
+
+                /*mMap.clear();
                 Object dataTransfer[] = new Object[2];
                 GetNearbyplacesData getNearbyPlacesData = new GetNearbyplacesData();
                 moption_relative.setVisibility(View.INVISIBLE);
@@ -502,10 +511,10 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(homepage.this, "Showing Nearby Hostels", Toast.LENGTH_SHORT).show();
+                Toast.makeText(homepage.this, "Showing Nearby Hostels", Toast.LENGTH_SHORT).show();*/
 
             }
-        });*/
+        });
 
         mhotel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -557,11 +566,17 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
             }
         });
 
-       /* mpizza.setOnClickListener(new View.OnClickListener() {
+      mpizza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                mMap.clear();
+
+            nearbyplace("pizza store");
+                moption_relative.setVisibility(View.INVISIBLE);
+                Toast.makeText(homepage.this, "Showing Nearby Bars", Toast.LENGTH_SHORT).show();
+
+
+                /* mMap.clear();
                 Object dataTransfer[] = new Object[2];
                 GetNearbyplacesData getNearbyPlacesData = new GetNearbyplacesData();
                 moption_relative.setVisibility(View.INVISIBLE);
@@ -571,10 +586,10 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(homepage.this, "Showing Nearby Pizza Stores", Toast.LENGTH_SHORT).show();
+                Toast.makeText(homepage.this, "Showing Nearby Pizza Stores", Toast.LENGTH_SHORT).show();*/
 
             }
-        });*/
+        });
 
         mcafe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -778,7 +793,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
             @Override
             public void onClick(View view) {
 
-                nearbyplace("gas_station");
+                nearbyplace("fuel");
                 mreoption_relative.setVisibility(View.INVISIBLE);
                 moption_relative.setVisibility(View.INVISIBLE);
                 Toast.makeText(homepage.this, "Showing Nearby Fuel Pumps", Toast.LENGTH_SHORT).show();
@@ -804,10 +819,10 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
             @Override
             public void onClick(View view) {
 
-                nearbyplace("car_repair");
+                nearbyplace("workshop");
                 mreoption_relative.setVisibility(View.INVISIBLE);
                 moption_relative.setVisibility(View.INVISIBLE);
-                Toast.makeText(homepage.this, "Showing Nearby Garages", Toast.LENGTH_SHORT).show();
+                Toast.makeText(homepage.this, "Showing Nearby workshops", Toast.LENGTH_SHORT).show();
 
 
 
@@ -856,7 +871,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
             @Override
             public void onClick(View view) {
 
-                nearbyplace("car_wash");
+                nearbyplace("car wash");
                 mreoption_relative.setVisibility(View.INVISIBLE);
                 moption_relative.setVisibility(View.INVISIBLE);
                 Toast.makeText(homepage.this, "Showing Nearby Car Wash Areas", Toast.LENGTH_SHORT).show();
@@ -882,7 +897,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
             @Override
             public void onClick(View view) {
 
-                nearbyplace("taxi_stand");
+                nearbyplace("taxi");
                 mreoption_relative.setVisibility(View.INVISIBLE);
                 moption_relative.setVisibility(View.INVISIBLE);
                 Toast.makeText(homepage.this, "Showing Nearby Taxi Stands", Toast.LENGTH_SHORT).show();
@@ -909,7 +924,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
             @Override
             public void onClick(View view) {
 
-                nearbyplace("car_dealer");
+                nearbyplace("showroom");
                 mreoption_relative.setVisibility(View.INVISIBLE);
                 moption_relative.setVisibility(View.INVISIBLE);
                 Toast.makeText(homepage.this, "Showing Nearby Showrooms", Toast.LENGTH_SHORT).show();
@@ -935,7 +950,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
             @Override
             public void onClick(View view) {
 
-                nearbyplace("hair_care");
+                nearbyplace("hair cut");
                 mreoption_relative.setVisibility(View.INVISIBLE);
                 moption_relative.setVisibility(View.INVISIBLE);
                 Toast.makeText(homepage.this, "Showing Nearby HAir Cares", Toast.LENGTH_SHORT).show();
@@ -961,6 +976,12 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
             @Override
             public void onClick(View view) {
 
+
+                nearbyplace("swimming pool");
+                moption_relative.setVisibility(View.INVISIBLE);
+                Toast.makeText(homepage.this, "Showing Nearby swimming pools", Toast.LENGTH_SHORT).show();
+
+
                /* mMap.clear();
                 Object dataTransfer[] = new Object[2];
                 GetNearbyplacesData getNearbyPlacesData = new GetNearbyplacesData();
@@ -976,6 +997,34 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
 
             }
         });
+
+
+        mfutsall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                nearbyplace("futsal");
+                moption_relative.setVisibility(View.INVISIBLE);
+                Toast.makeText(homepage.this, "Showing Nearby futsals", Toast.LENGTH_SHORT).show();
+
+
+               /* mMap.clear();
+                Object dataTransfer[] = new Object[2];
+                GetNearbyplacesData getNearbyPlacesData = new GetNearbyplacesData();
+
+                moption_relative.setVisibility(View.INVISIBLE);
+                String swimming_pool = "swimming_pool";
+                String url = getUrl(latitude, longitude, swimming_pool);
+                dataTransfer[0] = mMap;
+                dataTransfer[1] = url;
+
+                getNearbyPlacesData.execute(dataTransfer);
+                Toast.makeText(homepage.this, "Showing Nearby Swimming pools", Toast.LENGTH_SHORT).show();*/
+
+            }
+        });
+
 
 
 
@@ -1030,10 +1079,10 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
                                 else if(placeType.equals("restaurant"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_restaurant));
 
-                                else if(placeType.equals("school"))
+                                else if(placeType.equals("college"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_school));
 
-                                else if(placeType.equals("travel_agency"))
+                                else if(placeType.equals("consultancy"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_consultancies));
 
                                 else if(placeType.equals("hotel"))
@@ -1051,7 +1100,7 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
                                 else if(placeType.equals("shopping_mall"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_mall));
 
-                                else if(placeType.equals("movie_theater"))
+                                else if(placeType.equals("cinema"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_cinema));
 
                                 else if(placeType.equals("gym"))
@@ -1066,26 +1115,43 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
                                 else if(placeType.equals("atm"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_atm));
 
-                                else if(placeType.equals("gas_station"))
+                                else if(placeType.equals("fuel"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_gasstation));
 
-                                else if(placeType.equals("car_repair"))
+                                else if(placeType.equals("workshop"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_garage));
 
                                 else if(placeType.equals("parking"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_parking));
 
-                                else if(placeType.equals("car_wash"))
+                                else if(placeType.equals("car wash"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_carwash));
 
-                                else if(placeType.equals("taxi_stand"))
+                                else if(placeType.equals("taxi"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_taxi));
 
-                                else if(placeType.equals("car_dealer"))
+                                else if(placeType.equals("showroom"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_showroom));
 
-                                else if(placeType.equals("hair_care"))
+                                else if(placeType.equals("hair cut"))
                                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_haircare));
+
+                                else if(placeType.equals("ambulance"))
+                                    markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_ambulance));
+
+                                else if(placeType.equals("swimming pool"))
+                                    markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_swimming));
+
+                                else if(placeType.equals("futsal"))
+                                    markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_futsal));
+
+                                else if(placeType.equals("pizza store"))
+                                    markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_pizza));
+
+                                else if(placeType.equals("hostel"))
+                                    markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_hostel));
+
+
 
 
                                 else
@@ -1145,9 +1211,9 @@ public class homepage extends AppCompatActivity implements OnMapReadyCallback,
         StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         googlePlaceUrl.append("location="+latitude+","+longitude);
         googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
-        googlePlaceUrl.append("&type="+placeType);
+        googlePlaceUrl.append("&keyword="+placeType);
         googlePlaceUrl.append("&sensor=true");
-        googlePlaceUrl.append("&key="+"AIzaSyDbYb5986R2ZwCYBEetIVwgbZ-gz10QYRg");
+        googlePlaceUrl.append("&key="+"AIzaSyAsEdfrZ7qJ-sMdTHs7RQAk78PsfScpjqk");
 
         Log.d("MapActivity", "url = "+googlePlaceUrl.toString());
 
